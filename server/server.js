@@ -37,6 +37,11 @@ const checkAndSeed = async () => {
 };
 checkAndSeed();
 
+// Root welcome route
+app.get('/', (req, res) => {
+  res.send('🥬 FreshCart Grocery Delivery API is running live!');
+});
+
 // Health route
 app.get('/api/health', (req, res) => {
   res.json({
